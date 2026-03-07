@@ -62,25 +62,37 @@ Each project is stored in `.claude-plan/NNNN - Description/`:
 
 ## Using in Another Project
 
-Add this repo as a git submodule and symlink `.claude` to its contents:
+Add this repo as a git submodule, then symlink only the `commands` directory into your `.claude/`:
 
 ```bash
 # In the root of your other project:
-git submodule add <url> .claude-setup
-ln -s .claude-setup/.claude .claude
-git add .claude .claude-setup
+git submodule add <url> claude-setup
+mkdir -p .claude
+ln -s ../claude-setup/.claude/commands .claude/commands
+cp claude-setup/.claude/CLAUDE.md .claude/CLAUDE.md
+git add .claude .gitmodules claude-setup
 git commit -m "chore: add claude-setup"
 ```
 
-To update the setup later:
+This keeps your own `.claude/CLAUDE.md` (customizable) while sharing the commands via symlink. The `cp` gives you a starting point — edit it freely.
+
+To update the commands later:
 
 ```bash
-git submodule update --remote .claude-setup
-git add .claude-setup
+git submodule update --remote claude-setup
+git add claude-setup
 git commit -m "chore: update claude-setup"
 ```
 
-> **Note:** The symlink approach does not work on Windows.
+> **Note:** The symlink approach does not work on Windows. On Windows, copy the `commands` folder manually instead.
+
+### Troubleshooting
+
+If `ln -s` fails because `.claude/commands` already exists:
+```bash
+rm -rf .claude/commands
+ln -s ../claude-setup/.claude/commands .claude/commands
+```
 
 ## Key Properties
 

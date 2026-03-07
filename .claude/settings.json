@@ -1,6 +1,6 @@
 {
   "allowedTools": [
-    "Edit(.claude/wip/*)",
-    "Write(.claude/wip/*)"
+    "Edit(.claude-plan/**)",
+    "Write(.claude-plan/**)"
   ]
 }

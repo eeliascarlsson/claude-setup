@@ -1,14 +1,26 @@
-Read `.claude-plan/research.md` thoroughly, then create a detailed implementation plan for: $ARGUMENTS
+Create an implementation plan for project $ARGUMENTS.
 
-Write the plan to `.claude-plan/plan.md`. Include:
+Extract the project number from `$ARGUMENTS` (format: `N` or `NNNN`), zero-pad to 4 digits.
 
-- **Approach**: what you'll do and why, referencing the research findings
-- **Changes**: for each file to be modified or created, show the actual code changes (not pseudocode) with file paths
-- **Trade-offs**: alternatives considered and why this approach was chosen
-- **Steps**: a numbered checklist of discrete implementation tasks (these will be checked off during implementation)
+**Steps:**
+
+1. Zero-pad project number from `$ARGUMENTS` to 4 digits
+2. Find project folder: `.claude-plan/NNNN - */`
+3. If not found, error: "Project NNNN not found. Use /new-idea to create a project."
+4. Read in order: `idea.md`, `research.md` (if they exist)
+5. Write `.claude-plan/NNNN - Description/plan.md` with:
+   - **Approach**: what you'll do and why, referencing research findings and pre-plan decisions
+   - **Changes**: for each file to be modified or created, show actual code changes (not pseudocode) with file paths
+   - **Trade-offs**: alternatives considered and why this approach was chosen
+   - **Steps**: a numbered checklist of discrete implementation tasks in this format:
+     ```
+     - [ ] Task 1
+     - [ ] Task 2
+     - [ ] Task 3
+     ```
 
 Plan to write tests if this fits the repository's current test standard/coverage.
 
 Do not implement anything. Write the plan only, then wait.
 
-I will annotate `.claude-plan/plan.md` with inline notes. When I send it back, update the plan accordingly and wait again. We repeat this until I explicitly say to proceed with implementation.
+I will annotate `.claude-plan/NNNN - Description/plan.md` with inline notes. When I send it back, update the plan accordingly and wait again. We repeat this until I explicitly say to proceed with implementation.

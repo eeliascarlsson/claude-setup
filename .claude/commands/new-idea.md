@@ -17,7 +17,7 @@ Start a new project idea.
    - **Initial Idea**: (user's original description)
    - **Clarifying Q&A**: (questions and answers)
    - **Refined Goal**: (synthesized understanding)
-   - **Next Steps**: "Use /research:NNNN to begin codebase study"
-8. Confirm to user: "Created project NNNN - Description. Use /research:NNNN to continue."
+   - **Next Steps**: "Use /research NNNN to begin codebase study"
+8. Confirm to user: "Created project NNNN - Description. Use /research NNNN to continue."
 
 Do not read any code yet. This phase is purely for understanding intent.

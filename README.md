@@ -60,6 +60,28 @@ Each project is stored in `.claude-plan/NNNN - Description/`:
 
 `.claude-plan/` is listed in `.gitignore` — project files are local only and not committed.
 
+## Using in Another Project
+
+Add this repo as a git submodule and symlink `.claude` to its contents:
+
+```bash
+# In the root of your other project:
+git submodule add <url> .claude-setup
+ln -s .claude-setup/.claude .claude
+git add .claude .claude-setup
+git commit -m "chore: add claude-setup"
+```
+
+To update the setup later:
+
+```bash
+git submodule update --remote .claude-setup
+git add .claude-setup
+git commit -m "chore: update claude-setup"
+```
+
+> **Note:** The symlink approach does not work on Windows.
+
 ## Key Properties
 
 - **Stateless**: Project number is passed in the command argument, so two Claude instances can work on different projects simultaneously without conflict.

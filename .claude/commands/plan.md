@@ -19,9 +19,12 @@ Extract the project number from `$ARGUMENTS` (format: `N` or `NNNN`), zero-pad t
      - [ ] Task 2
      - [ ] Task 3
      ```
+7. Summarize the plan to me in the chat.
+8. Ask me 3-5 questions on design choices or though decisions you had to take will making the plan.
+
 
 Plan to write tests if this fits the repository's current test standard/coverage.
 
 Do not implement anything. Write the plan only, then wait.
 
-I will annotate `.claude-plan/NNNN - Description/plan.md` with inline notes. When I send it back, update the plan accordingly and wait again. We repeat this until I explicitly say to proceed with implementation.
+Do not implement anything until I explicitly say to proceed with implementation.

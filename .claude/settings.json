@@ -1,0 +1,6 @@
+{
+  "allowedTools": [
+    "Edit(.claude/wip/*)",
+    "Write(.claude/wip/*)"
+  ]
+}

@@ -8,7 +8,8 @@ Extract the project number from `$ARGUMENTS` (format: `N` or `NNNN`), zero-pad t
 2. Find project folder: `.claude-plan/NNNN - */`
 3. If not found, error: "Project NNNN not found. Use /new-idea to create a project."
 4. Read in order: `idea.md`, `research.md` (if they exist)
-5. Write `.claude-plan/NNNN - Description/plan.md` with:
+5. Ask 3-5 questions on the implementation if there is any uncertanties/ambgiuty on how the feature should be planned.
+6. Write `.claude-plan/NNNN - Description/plan.md` with:
    - **Approach**: what you'll do and why, referencing research findings and pre-plan decisions
    - **Changes**: for each file to be modified or created, show actual code changes (not pseudocode) with file paths
    - **Trade-offs**: alternatives considered and why this approach was chosen

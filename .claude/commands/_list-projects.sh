@@ -49,7 +49,7 @@ for dir in "$PLAN_DIR"/[0-9][0-9][0-9][0-9]\ -\ */; do
   # Summary: first non-empty line after "## Refined Goal" in idea.md
   summary=""
   if [ -f "$idea" ]; then
-    summary=$(awk '/^## Refined Goal/{found=1; next} found && /^[^#[:space:]]/{print; exit} found && /^[[:space:]]+[^[:space:]]/{print; exit}' "$idea" | head -1)
+    summary=$(awk '/^## Refined Goal/{found=1; next} found && /^[^#[:space:]]/{print; exit} found && /^[[:space:]]+[^[:space:]]/{print; exit}' "$idea" | head -1 | tr -d '\r\n')
     if [ ${#summary} -gt 60 ]; then
       summary="${summary:0:60}..."
     fi
@@ -63,8 +63,10 @@ if [ ${#rows[@]} -eq 0 ]; then
   exit 0
 fi
 
+echo '```'
 printf "%-4s  %-28s  %-13s  %s\n" "ID" "Name" "Phase" "Summary"
 printf "%-4s  %-28s  %-13s  %s\n" "----" "----------------------------" "-------------" "-------"
 for row in "${rows[@]}"; do
   echo "$row"
 done
+echo '```'

@@ -1,5 +1,5 @@
 List all projects in `.claude-plan/`.
 
-!`.claude/commands/_list-projects.sh`
+!`~/.claude/commands/_list-projects.sh`
 
-Display the table above to the user exactly as printed. Do not add commentary unless the output is empty, in which case say "No projects found. Use /new-idea to create one."
+Display the output above verbatim. Do not add commentary unless the output is empty or says "no projects found", in which case say "No projects found. Use /new-idea to create one."

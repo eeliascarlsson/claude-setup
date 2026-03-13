@@ -15,7 +15,7 @@ Extract the project number from `$ARGUMENTS` (format: `N` or `NNNN`), zero-pad t
    - Identify all integration points, side effects, and shared state
    - Read tests to understand expected behaviour and edge cases
    - Note constraints: performance, compatibility, existing conventions
-6. Write `.claude-plan/NNNN - Description/research.md` with:
+6. Write `.claude-plan/NNNN - Description/research.md` using full markdown syntax (headings, bullet lists, bold, inline code, code blocks where appropriate). Structure:
    - **What exists**: relevant code, files, and how they actually work (be specific — reference line numbers and function names)
    - **How it connects**: data flow, call chains, integration points
    - **Constraints**: technical limitations, existing patterns that must be followed

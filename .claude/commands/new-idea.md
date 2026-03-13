@@ -13,7 +13,7 @@ Start a new project idea.
    - What does success look like?
    - Are there any constraints (time, tech stack, compatibility)?
    - Any similar features/patterns already in the codebase?
-7. Write `.claude-plan/NNNN - Description/idea.md` with:
+7. Write `.claude-plan/NNNN - Description/idea.md` using full markdown syntax (headings, bullet lists, bold, code blocks where appropriate). Structure:
    - **Initial Idea**: (user's original description)
    - **Clarifying Q&A**: (questions and answers)
    - **Refined Goal**: (synthesized understanding)

@@ -20,4 +20,6 @@ Start a new project idea.
    - **Next Steps**: "Use /research NNNN to begin codebase study"
 8. Confirm to user: "Created project NNNN - Description. Use /research NNNN to continue."
 
+> **Note:** Context will be cleared when you move to the next step. All information has been saved to `idea.md`. Run `/research NNNN` when ready.
+
 Do not read any code yet. This phase is purely for understanding intent.

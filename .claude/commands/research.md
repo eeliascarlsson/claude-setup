@@ -25,6 +25,8 @@ Extract the project number from `$ARGUMENTS` (format: `N` or `NNNN`), zero-pad t
 8. After writing, ask the user via AskUserQuestion:
    - "Did I focus on the right areas? Is there anything I missed or misunderstood?"
    - "Are there other parts of the codebase I should investigate before planning?"
-9. If user provides corrections or points to additional areas, re-read the relevant code and update research.md before finishing.
+9. If user provides corrections or points to additional areas, re-read the relevant code and update research.md before finishing. All corrections and additions must be written into research.md — do not leave anything only in chat.
+
+> **Note:** Context will be cleared when you move to the next step. All findings are saved in `research.md`. Run `/plan NNNN` when ready.
 
 Do not suggest solutions or approaches. Research only — the goal is a complete, accurate picture of the current state.

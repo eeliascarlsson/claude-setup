@@ -21,8 +21,8 @@ Extract the project number from `$ARGUMENTS` (format: `N` or `NNNN`), zero-pad t
    - **Constraints**: technical limitations, existing patterns that must be followed
    - **Risks**: anything that could go wrong or requires special care
    - **Key files**: list of files that will likely need to be modified or created
-7. Write a short summary of the research to the user in the chat.
-8. After writing, ask the user via AskUserQuestion:
+7. Output a concise summary of the research as plain text — key findings, what exists, and what will need to change. Complete this output fully before proceeding to the next step.
+8. Only after the summary above has been output, ask the user via AskUserQuestion:
    - "Did I focus on the right areas? Is there anything I missed or misunderstood?"
    - "Are there other parts of the codebase I should investigate before planning?"
 9. If user provides corrections or points to additional areas, re-read the relevant code and update research.md before finishing. All corrections and additions must be written into research.md — do not leave anything only in chat.

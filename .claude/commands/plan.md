@@ -12,6 +12,7 @@ Extract the project number from `$ARGUMENTS` (format: `N` or `NNNN`), zero-pad t
 6. Write `.claude-plan/NNNN - Description/plan.md` using full markdown syntax (headings, bullet lists, bold, inline code, code blocks where appropriate). Structure:
    - **Pre-Plan Decisions**: questions asked in step 5 and the user's answers
    - **Approach**: what you'll do and why, referencing research findings and pre-plan decisions
+   - If the plan introduces any new packages, libraries, or external tools: a `> ⚠️ New dependencies: <list>` callout block placed immediately after the Approach section
    - **Changes**: for each file to be modified or created, show actual code changes (not pseudocode) with file paths
    - **Trade-offs**: alternatives considered and why this approach was chosen
    - **Steps**: a numbered checklist of discrete implementation tasks in this format:
@@ -20,8 +21,8 @@ Extract the project number from `$ARGUMENTS` (format: `N` or `NNNN`), zero-pad t
      - [ ] Task 2
      - [ ] Task 3
      ```
-7. Summarize the plan to me in the chat.
-8. Ask me 3-5 questions on design choices or tough decisions you had to make while writing the plan. Write every answer into plan.md under a **Design Decisions** section — do not leave answers only in chat. Update plan.md with any changes that result from the discussion.
+7. Output a concise summary of the plan as plain text — approach, key changes, and checklist outline. Complete this output fully before proceeding to the next step.
+8. Only after the summary above has been output, ask me 3-5 questions on design choices or tough decisions you had to make while writing the plan. Write every answer into plan.md under a **Design Decisions** section — do not leave answers only in chat. Update plan.md with any changes that result from the discussion.
 
 Plan to write tests if this fits the repository's current test standard/coverage.
 

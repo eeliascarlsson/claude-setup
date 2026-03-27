@@ -22,9 +22,10 @@ Extract the project number from `$ARGUMENTS` (format: `N` or `NNNN`), zero-pad t
    - **Risks**: anything that could go wrong or requires special care
    - **Key files**: list of files that will likely need to be modified or created
 7. Output a concise summary of the research as plain text — key findings, what exists, and what will need to change. Complete this output fully before proceeding to the next step.
-8. Only after the summary above has been output, ask the user via AskUserQuestion:
+8. Only after the summary above has been output, read `.claude-plan/NNNN - Description/questions.md` if it exists. Skip any question that has already been answered there (or a substantially similar one). If any are skipped, output a brief note: "Skipping already-answered questions." Then ask any remaining questions via AskUserQuestion:
    - "Did I focus on the right areas? Is there anything I missed or misunderstood?"
    - "Are there other parts of the codebase I should investigate before planning?"
+   After receiving answers, append the Q&A pairs to `.claude-plan/NNNN - Description/questions.md` (create if it doesn't exist). Format: `**Q:** <question>` on one line, `**A:** <answer>` on the next, blank line between pairs.
 9. If user provides corrections or points to additional areas, re-read the relevant code and update research.md before finishing. All corrections and additions must be written into research.md — do not leave anything only in chat.
 
 > **Note:** Context will be cleared when you move to the next step. All findings are saved in `research.md`. Run `/plan NNNN` when ready.

@@ -22,6 +22,4 @@ Extract the project number from `$ARGUMENTS` (format: `N` or `NNNN`), zero-pad t
 
 When fully done, summarise what was implemented and flag any follow-up items.
 
-Lastly suggest a commit message for the code you edited.
-
 Do not silently adapt. The plan is the contract.

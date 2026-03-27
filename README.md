@@ -30,6 +30,7 @@ A set of Claude Code commands and instructions that enforce a disciplined workfl
 | `/implement:N` | Implement the plan for project N. Follows `plan.md` exactly, checks off tasks as completed. |
 | `/list-projects` | Show all projects and their current phase. |
 | `/quick-job` | Implement directly, skipping all phases. For small, well-understood tasks. |
+| `/commit N` | Analyze staged diff for project N, write a conventional commit message, and commit. |
 
 **Usage examples:**
 
